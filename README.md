@@ -139,6 +139,12 @@ cl.approve("0x722bdb3b6E5142C3d1aE39793d94E6a8B4453f3e",0)
 cl.allowance( accounts[0],"0x722bdb3b6E5142C3d1aE39793d94E6a8B4453f3e")
 ev.ex5_revokedExerciceSolution()
 ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",5)
+
+#ex6
+ev.submitExercice("0xf582e189fe7A74eA1f7964d06d792195D4F467DE")
+ev.ex2_claimedFromContract()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",6)
+
 .exit
 ```
 

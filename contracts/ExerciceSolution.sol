@@ -67,12 +67,25 @@ contract ExerciceSolution {
             return amountToWithdraw;
         }
     }
-    /*
+    
     // ex6_depositTokens
     // function to deposit claimableTokens in ExerciceSolution Contract
-	function depositTokens(uint256 amountToWithdraw) public returns (uint256){
-
+    event deposit(address addrdepositor, bool status , uint256 amount);
+	function depositTokens(uint256 amountToDeposit) public returns (uint256){
+        
+        uint256 claimerBalance = claimedTokenAddress[msg.sender];
+        require(amountToDeposit > 0, "no token to deposit");
+        // we will be allowed to manipulate msg.sender token with the amount to deposit
+        // lets transfer the token in ExerciceSolution contract
+        if(Claimable.transferFrom(msg.sender,address(this),amountToDeposit))
+        {
+            //update tokensInCustody that belongs to depositor
+            claimedTokenAddress[msg.sender] = claimerBalance + amountToDeposit;
+            emit deposit(msg.sender, true, amountToDeposit);
+            return amountToDeposit;
+        }
     }
+    /*
     // Get ExerciceSolutionERC20 address
 	function getERC20DepositAddress() public returns (address){
         return adress;
