@@ -16,7 +16,8 @@ module.exports = async function (deployer) {
     
     //await TDToken.setTeacher(Evaluator.address, true)
 
-    // await deployer.deploy(ExerciceSolution,ClaimableToken.address );//for Ganache
+    //await deployer.deploy(ExerciceSolution,ClaimableToken.address );//for Ganache at creation
+    //await deployer.deploy(ExerciceSolution,'0x9e9439C0398306822F711DE40247C74d5fee8dDC' );//for Ganache
     await deployer.deploy(ExerciceSolution,'0xb5d82FEE98d62cb7Bc76eabAd5879fa4b29fFE94' );
     var Solution = await ExerciceSolution.deployed();
 

@@ -111,11 +111,18 @@ cl.claimTokens()
 cl.balanceOf("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058")
 
 Evaluator.deployed().then((instance) => {ev = instance;})
+#ex1
 ev.ex1_claimedPoints()
 ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",1)
+#ex2
 ev.submitExercice("0x214E845C5fbb1FcA2C16c95A93eBA8C36Da20B82") 
 ev.ex2_claimedFromContract()
 truffle(ganache)> ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",2)
+#ex3
+ev.submitExercice("0xcDfF26EEc6Ca1b40eFF686F74D98d94915DA1f89")
+ev.ex2_claimedFromContract()
+ev.ex3_withdrawFromContract()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",3)
 .exit
 ```
 

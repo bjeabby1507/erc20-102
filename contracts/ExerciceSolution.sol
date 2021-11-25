@@ -46,12 +46,28 @@ contract ExerciceSolution {
 
     }
 
-    /*
     //ex3_withdrawFromContract
     // function to withdraw tokens through ExerciceSolution Contract
+    event withdrawn(address addrwithdrawer , bool status , uint256 amount);
 	function withdrawTokens(uint256 amountToWithdraw) public returns (uint256){
 
+        // Checking how many tokens the Withdrawer hold and can withdraw
+        uint256 claimerBalance = claimedTokenAddress[msg.sender];
+        require(claimedTokenAddress[msg.sender] > 0, "You can't withdraw, you hold no token");
+        // suffisant amount of token ?
+        require(claimedTokenAddress[msg.sender] >= amountToWithdraw, "You can't withdraw, no enough tokens");
+
+        //withdraw , check and keep track of tokens
+        //Claimable.transfer(msg.sender,amountToWithdraw);
+        if(Claimable.transfer(msg.sender,amountToWithdraw))
+        {
+            //update tokensInCustody
+            claimedTokenAddress[msg.sender] = claimerBalance - amountToWithdraw;
+            emit withdrawn(msg.sender, true, amountToWithdraw);
+            return amountToWithdraw;
+        }
     }
+    /*
     // ex6_depositTokens
     // function to deposit claimableTokens in ExerciceSolution Contract
 	function depositTokens(uint256 amountToWithdraw) public returns (uint256){
