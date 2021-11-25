@@ -71,3 +71,51 @@ Extra points if you find bugs / corrections this TD can benefit from, and submit
 - TDToken `0x77dAe18835b08A75490619DF90a3Fa5f4120bB2E`
 - ClaimableToken `0xb5d82FEE98d62cb7Bc76eabAd5879fa4b29fFE94`
 - Evaluator `0x384C00Ff43Ed5376F2d7ee814677a15f3e330705`
+
+## TD
+- address : 0x6f7280BF25d0D4A3f47b874bEdDdc4Ff4Cb44Cd6 
+#### Ex1
+- Intereact with ClaimToken contract and claim Token with [Mycrypto](https://app.mycrypto.com) 
+#### Ex2
+- Test with Gnacahe ([follow this](https://www.trufflesuite.com/docs/ganache/truffle-projects/linking-a-truffle-project))
+
+* In the `truffle-config.js` 
+
+```javascript
+module.exports = {
+  networks: {
+    ganache: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
+      network_id: 5777,       // Any network (default: none)
+    }
+  },
+```
+* Then add in the Ganache Worksplace the truffle-config js file
+
+```shell
+# Compile 
+truffle compile
+
+# Migrate
+truffle migrate --reset -- network ganache
+
+# Test
+truffle console 
+# in the console 
+ERC20Claimable.deployed().then((instance) => {cl = instance;})
+
+cl.totalSupply()
+cl.symbol()
+cl.claimTokens()
+cl.balanceOf("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058")
+
+Evaluator.deployed().then((instance) => {ev = instance;})
+ev.ex1_claimedPoints()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",1)
+ev.submitExercice("0x214E845C5fbb1FcA2C16c95A93eBA8C36Da20B82") 
+ev.ex2_claimedFromContract()
+truffle(ganache)> ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",2)
+.exit
+```
+

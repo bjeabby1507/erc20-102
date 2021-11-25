@@ -1,0 +1,2733 @@
+{
+  "contractName": "ExerciceSolution",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ERC20Claimable",
+          "name": "_claimableERC20",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "addrClaimer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "status",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "claimed",
+      "type": "event"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback",
+      "payable": true
+    },
+    {
+      "inputs": [],
+      "name": "Claimable",
+      "outputs": [
+        {
+          "internalType": "contract ERC20Claimable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "claimedTokenAddress",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive",
+      "payable": true
+    },
+    {
+      "inputs": [],
+      "name": "claimTokensOnBehalf",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "callerAddress",
+          "type": "address"
+        }
+      ],
+      "name": "tokensInCustody",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ERC20Claimable\",\"name\":\"_claimableERC20\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addrClaimer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"status\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"claimed\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"Claimable\",\"outputs\":[{\"internalType\":\"contract ERC20Claimable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claimTokensOnBehalf\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"claimedTokenAddress\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"callerAddress\",\"type\":\"address\"}],\"name\":\"tokensInCustody\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ExerciceSolution.sol\":\"ExerciceSolution\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"urls\":[\"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c\",\"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xca0c2396dbeb3503b51abf4248ebf77a1461edad513c01529df51850a012bee3\",\"urls\":[\"bzz-raw://991b44ff44e0496e8554a90f4c0512c28faed45104d40430019f3c67ea67740e\",\"dweb:/ipfs/Qmc3nRapVbcctELoZS5qe17zLkFB3bETBfwzCTMF1CSuGE\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"project:/contracts/ERC20Claimable.sol\":{\"keccak256\":\"0x265568187eb938df947918ca2b93e0eb4f05af6212beba36593ce1820ba2dcab\",\"urls\":[\"bzz-raw://07a44a6ba118587d3b3afe178d346ecfecbdbd359f3663813594541d1bea78c0\",\"dweb:/ipfs/QmPrwZykKTYXMe8WuTm57DVEM6BpoGLwXFiGyegfvTkppT\"]},\"project:/contracts/ExerciceSolution.sol\":{\"keccak256\":\"0xd042ff2cb0a75ac10833946cf3c576bfbfc26b6f03358d3602acb3227265330b\",\"urls\":[\"bzz-raw://46fe81391bcb2ccef02003eba9aec9d88b1c4e01f77604c5f6a27af41973ed3f\",\"dweb:/ipfs/QmQiqJn1SMrdKESowJEDvSdBRn1UZg2WZGn5q74H3Zw7Ux\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516105e33803806105e38339818101604052602081101561003357600080fd5b810190808051906020019092919050505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061054e806100956000396000f3fe6080604052600436106100435760003560e01c80630776d1181461004c5780630e4f7f36146100b1578063402a1d4f146100c8578063a66d0bd51461011f5761004a565b3661004a57005b005b34801561005857600080fd5b5061009b6004803603602081101561006f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610184565b6040518082815260200191505060405180910390f35b3480156100bd57600080fd5b506100c66101cc565b005b3480156100d457600080fd5b506100dd6104da565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012b57600080fd5b5061016e6004803603602081101561014257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610500565b6040518082815260200191505060405180910390f35b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561026d57600080fd5b505afa158015610281573d6000803e3d6000fd5b505050506040513d602081101561029757600080fd5b81019080805190602001909291905050509050600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166348c54b9d6040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561031457600080fd5b505af1158015610328573d6000803e3d6000fd5b505050506000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156103cd57600080fd5b505afa1580156103e1573d6000803e3d6000fd5b505050506040513d60208110156103f757600080fd5b8101908080519060200190929190505050905060008282039050806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055507f3a2ab24c5a179e8d93bc9d204157eea96a3a8de401f3fb03bdba07fb672284f433600183604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183151515158152602001828152602001935050505060405180910390a1505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000602052806000526040600020600091509050548156fea2646970667358221220cfb986aa36347e1655f2f091a2ba5a3d4240d3819359e662dbfa451ae89627a064736f6c63430006020033",
+  "deployedBytecode": "0x6080604052600436106100435760003560e01c80630776d1181461004c5780630e4f7f36146100b1578063402a1d4f146100c8578063a66d0bd51461011f5761004a565b3661004a57005b005b34801561005857600080fd5b5061009b6004803603602081101561006f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610184565b6040518082815260200191505060405180910390f35b3480156100bd57600080fd5b506100c66101cc565b005b3480156100d457600080fd5b506100dd6104da565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561012b57600080fd5b5061016e6004803603602081101561014257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610500565b6040518082815260200191505060405180910390f35b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561026d57600080fd5b505afa158015610281573d6000803e3d6000fd5b505050506040513d602081101561029757600080fd5b81019080805190602001909291905050509050600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166348c54b9d6040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561031457600080fd5b505af1158015610328573d6000803e3d6000fd5b505050506000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156103cd57600080fd5b505afa1580156103e1573d6000803e3d6000fd5b505050506040513d60208110156103f757600080fd5b8101908080519060200190929190505050905060008282039050806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055507f3a2ab24c5a179e8d93bc9d204157eea96a3a8de401f3fb03bdba07fb672284f433600183604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183151515158152602001828152602001935050505060405180910390a1505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000602052806000526040600020600091509050548156fea2646970667358221220cfb986aa36347e1655f2f091a2ba5a3d4240d3819359e662dbfa451ae89627a064736f6c63430006020033",
+  "sourceMap": "63:2082:7:-:0;;;261:140;8:9:-1;5:2;;;30:1;27;20:12;5:2;261:140:7;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;261:140:7;;;;;;;;;;;;;;;;336:15;324:9;;:27;;;;;;;;;;;;;;;;;;261:140;63:2082;;;;;;",
+  "deployedSourceMap": "63:2082:7:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1453:166;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1453:166:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1453:166:7;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;815:562;;8:9:-1;5:2;;;30:1;27;20:12;5:2;815:562:7;;;:::i;:::-;;221:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;221:31:7;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;160:54;;8:9:-1;5:2;;;30:1;27;20:12;5:2;160:54:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;160:54:7;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1453:166;1517:7;1575:19;:34;1595:13;1575:34;;;;;;;;;;;;;;;;1568:41;;1453:166;;;:::o;815:562::-;919:22;944:9;;;;;;;;;;;:19;;;972:4;944:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;944:34:7;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;944:34:7;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;944:34:7;;;;;;;;;;;;;;;;919:59;;1014:9;;;;;;;;;;;:21;;;:23;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1014:23:7;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1014:23:7;;;;1077:25;1105:9;;;;;;;;;;;:19;;;1133:4;1105:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1105:34:7;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1105:34:7;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1105:34:7;;;;;;;;;;;;;;;;1077:62;;1190:14;1227;1207:17;:34;1190:51;;1316:6;1282:19;:31;1302:10;1282:31;;;;;;;;;;;;;;;;:40;;;;;;;;;;;1338:31;1346:10;1357:4;1362:6;1338:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;815:562;;;:::o;221:31::-;;;;;;;;;;;;;:::o;160:54::-;;;;;;;;;;;;;;;;;:::o",
+  "source": "\r\npragma solidity ^0.6.0;\r\nimport './ERC20Claimable.sol';\r\n\r\n\r\ncontract ExerciceSolution {\r\n\r\n    // keep track of adresses who claim token and the amount\r\n    mapping(address => uint256) public claimedTokenAddress;\r\n    ERC20Claimable public Claimable;\r\n\r\n    constructor( ERC20Claimable _claimableERC20) \r\n\tpublic \r\n\t{\r\n\t\tClaimable = _claimableERC20; //0xb5d82FEE98d62cb7Bc76eabAd5879fa4b29fFE94\r\n\t}\r\n\r\n    //gets called when money is sent to this contract ;\r\n    fallback () external payable \r\n\t{}\r\n    // called when ether is sent to a contract with no calldata , when no other function matches\r\n\treceive () external payable \r\n\t{}\r\n\r\n    // ex2_claimedFromContract\r\n    // function to laiming tokens through ExerciceSolution Contract\r\n    event claimed(address addrClaimer , bool status , uint256 amount);\r\n    function claimTokensOnBehalf() public {\r\n        //see last amount , balance of tokens claimed\r\n        uint256 claimerBalance = Claimable.balanceOf(address(this));\r\n        // claim tokens\r\n        Claimable.claimTokens();\r\n        // save new balance\r\n        uint256 newClaimerBalance = Claimable.balanceOf(address(this));\r\n        // save the varriation amount \r\n        uint256 update = newClaimerBalance - claimerBalance;\r\n        // keep track of it \r\n        claimedTokenAddress[msg.sender]+= update;\r\n        emit claimed(msg.sender,true,update);\r\n    }\r\n    // Verifying if ExerciceSolution kept track of [msg.sender] balance\r\n\tfunction tokensInCustody(address callerAddress) public returns (uint256) {\r\n\r\n        // see the tracker \r\n        return claimedTokenAddress[callerAddress];\r\n\r\n    }\r\n\r\n    /*\r\n    //ex3_withdrawFromContract\r\n    // function to withdraw tokens through ExerciceSolution Contract\r\n\tfunction withdrawTokens(uint256 amountToWithdraw) public returns (uint256){\r\n\r\n    }\r\n    // ex6_depositTokens\r\n    // function to deposit claimableTokens in ExerciceSolution Contract\r\n\tfunction depositTokens(uint256 amountToWithdraw) public returns (uint256){\r\n\r\n    }\r\n    // Get ExerciceSolutionERC20 address\r\n\tfunction getERC20DepositAddress() public returns (address){\r\n        return adress;\r\n    // */\r\n}",
+  "sourcePath": "C:\\Users\\BJeab\\OneDrive\\Documents\\ESILV\\Monnaies Numériques\\TD6\\DEFI_ERC20\\erc20-102\\contracts\\ExerciceSolution.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ExerciceSolution.sol",
+    "exportedSymbols": {
+      "ExerciceSolution": [
+        2541
+      ]
+    },
+    "id": 2542,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2446,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "2:23:7"
+      },
+      {
+        "absolutePath": "project:/contracts/ERC20Claimable.sol",
+        "file": "./ERC20Claimable.sol",
+        "id": 2447,
+        "nodeType": "ImportDirective",
+        "scope": 2542,
+        "sourceUnit": 956,
+        "src": "27:30:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2541,
+        "linearizedBaseContracts": [
+          2541
+        ],
+        "name": "ExerciceSolution",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "a66d0bd5",
+            "id": 2451,
+            "name": "claimedTokenAddress",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2541,
+            "src": "160:54:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 2450,
+              "keyType": {
+                "id": 2448,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "168:7:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "160:27:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 2449,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "179:7:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "402a1d4f",
+            "id": 2453,
+            "name": "Claimable",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2541,
+            "src": "221:31:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+              "typeString": "contract ERC20Claimable"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 2452,
+              "name": "ERC20Claimable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 955,
+              "src": "221:14:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                "typeString": "contract ERC20Claimable"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2462,
+              "nodeType": "Block",
+              "src": "319:82:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2460,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2458,
+                      "name": "Claimable",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2453,
+                      "src": "324:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                        "typeString": "contract ERC20Claimable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2459,
+                      "name": "_claimableERC20",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2455,
+                      "src": "336:15:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                        "typeString": "contract ERC20Claimable"
+                      }
+                    },
+                    "src": "324:27:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                      "typeString": "contract ERC20Claimable"
+                    }
+                  },
+                  "id": 2461,
+                  "nodeType": "ExpressionStatement",
+                  "src": "324:27:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2463,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2456,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2455,
+                  "name": "_claimableERC20",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2463,
+                  "src": "274:30:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                    "typeString": "contract ERC20Claimable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2454,
+                    "name": "ERC20Claimable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 955,
+                    "src": "274:14:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                      "typeString": "contract ERC20Claimable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "272:33:7"
+            },
+            "returnParameters": {
+              "id": 2457,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "319:0:7"
+            },
+            "scope": 2541,
+            "src": "261:140:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2466,
+              "nodeType": "Block",
+              "src": "498:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2467,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2464,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "475:2:7"
+            },
+            "returnParameters": {
+              "id": 2465,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "498:0:7"
+            },
+            "scope": 2541,
+            "src": "466:34:7",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2470,
+              "nodeType": "Block",
+              "src": "632:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2471,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2468,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "609:2:7"
+            },
+            "returnParameters": {
+              "id": 2469,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "632:0:7"
+            },
+            "scope": 2541,
+            "src": "601:33:7",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 2479,
+            "name": "claimed",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2478,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2473,
+                  "indexed": false,
+                  "name": "addrClaimer",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2479,
+                  "src": "757:19:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2472,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "757:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2475,
+                  "indexed": false,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2479,
+                  "src": "779:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2474,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "779:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2477,
+                  "indexed": false,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2479,
+                  "src": "793:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2476,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "793:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "756:52:7"
+            },
+            "src": "743:66:7"
+          },
+          {
+            "body": {
+              "id": 2527,
+              "nodeType": "Block",
+              "src": "853:524:7",
+              "statements": [
+                {
+                  "assignments": [
+                    2483
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2483,
+                      "name": "claimerBalance",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2527,
+                      "src": "919:22:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2482,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "919:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2491,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 2488,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "972:4:7",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_ExerciceSolution_$2541",
+                              "typeString": "contract ExerciceSolution"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_ExerciceSolution_$2541",
+                              "typeString": "contract ExerciceSolution"
+                            }
+                          ],
+                          "id": 2487,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "964:7:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 2486,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "964:7:7",
+                            "typeDescriptions": {
+                              "typeIdentifier": null,
+                              "typeString": null
+                            }
+                          }
+                        },
+                        "id": 2489,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "964:13:7",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2484,
+                        "name": "Claimable",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2453,
+                        "src": "944:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                          "typeString": "contract ERC20Claimable"
+                        }
+                      },
+                      "id": 2485,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balanceOf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 436,
+                      "src": "944:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view external returns (uint256)"
+                      }
+                    },
+                    "id": 2490,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "944:34:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "919:59:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2492,
+                        "name": "Claimable",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2453,
+                        "src": "1014:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                          "typeString": "contract ERC20Claimable"
+                        }
+                      },
+                      "id": 2494,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "claimTokens",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 954,
+                      "src": "1014:21:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
+                      }
+                    },
+                    "id": 2495,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1014:23:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2496,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1014:23:7"
+                },
+                {
+                  "assignments": [
+                    2498
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2498,
+                      "name": "newClaimerBalance",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2527,
+                      "src": "1077:25:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2497,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1077:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2506,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 2503,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "1133:4:7",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_ExerciceSolution_$2541",
+                              "typeString": "contract ExerciceSolution"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_ExerciceSolution_$2541",
+                              "typeString": "contract ExerciceSolution"
+                            }
+                          ],
+                          "id": 2502,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1125:7:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 2501,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1125:7:7",
+                            "typeDescriptions": {
+                              "typeIdentifier": null,
+                              "typeString": null
+                            }
+                          }
+                        },
+                        "id": 2504,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1125:13:7",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2499,
+                        "name": "Claimable",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2453,
+                        "src": "1105:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC20Claimable_$955",
+                          "typeString": "contract ERC20Claimable"
+                        }
+                      },
+                      "id": 2500,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balanceOf",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 436,
+                      "src": "1105:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view external returns (uint256)"
+                      }
+                    },
+                    "id": 2505,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1105:34:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1077:62:7"
+                },
+                {
+                  "assignments": [
+                    2508
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2508,
+                      "name": "update",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2527,
+                      "src": "1190:14:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2507,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1190:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2512,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2511,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2509,
+                      "name": "newClaimerBalance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2498,
+                      "src": "1207:17:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 2510,
+                      "name": "claimerBalance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2483,
+                      "src": "1227:14:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1207:34:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1190:51:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2518,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 2513,
+                        "name": "claimedTokenAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2451,
+                        "src": "1282:19:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 2516,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 2514,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1302:3:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 2515,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1302:10:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1282:31:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2517,
+                      "name": "update",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2508,
+                      "src": "1316:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1282:40:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2519,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1282:40:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 2521,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1346:3:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 2522,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1346:10:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 2523,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1357:4:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2524,
+                        "name": "update",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2508,
+                        "src": "1362:6:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 2520,
+                      "name": "claimed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2479,
+                      "src": "1338:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bool_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,bool,uint256)"
+                      }
+                    },
+                    "id": 2525,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1338:31:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2526,
+                  "nodeType": "EmitStatement",
+                  "src": "1333:36:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "0e4f7f36",
+            "id": 2528,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimTokensOnBehalf",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2480,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "843:2:7"
+            },
+            "returnParameters": {
+              "id": 2481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "853:0:7"
+            },
+            "scope": 2541,
+            "src": "815:562:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2539,
+              "nodeType": "Block",
+              "src": "1526:93:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 2535,
+                      "name": "claimedTokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2451,
+                      "src": "1575:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 2537,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 2536,
+                      "name": "callerAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2530,
+                      "src": "1595:13:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1575:34:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2534,
+                  "id": 2538,
+                  "nodeType": "Return",
+                  "src": "1568:41:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "0776d118",
+            "id": 2540,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokensInCustody",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2530,
+                  "name": "callerAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2540,
+                  "src": "1478:21:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2529,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1478:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1477:23:7"
+            },
+            "returnParameters": {
+              "id": 2534,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2533,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2540,
+                  "src": "1517:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2532,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1517:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1516:9:7"
+            },
+            "scope": 2541,
+            "src": "1453:166:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2542,
+        "src": "63:2082:7"
+      }
+    ],
+    "src": "2:2143:7"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/ExerciceSolution.sol",
+      "exportedSymbols": {
+        "ExerciceSolution": [
+          2541
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".0"
+          ]
+        },
+        "id": 2446,
+        "name": "PragmaDirective",
+        "src": "2:23:7"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 956,
+          "absolutePath": "project:/contracts/ERC20Claimable.sol",
+          "file": "./ERC20Claimable.sol",
+          "scope": 2542,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2447,
+        "name": "ImportDirective",
+        "src": "27:30:7"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            2541
+          ],
+          "name": "ExerciceSolution",
+          "scope": 2542
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "a66d0bd5",
+              "name": "claimedTokenAddress",
+              "overrides": null,
+              "scope": 2541,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => uint256)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => uint256)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 2448,
+                    "name": "ElementaryTypeName",
+                    "src": "168:7:7"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 2449,
+                    "name": "ElementaryTypeName",
+                    "src": "179:7:7"
+                  }
+                ],
+                "id": 2450,
+                "name": "Mapping",
+                "src": "160:27:7"
+              }
+            ],
+            "id": 2451,
+            "name": "VariableDeclaration",
+            "src": "160:54:7"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "402a1d4f",
+              "name": "Claimable",
+              "overrides": null,
+              "scope": 2541,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract ERC20Claimable",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ERC20Claimable",
+                  "referencedDeclaration": 955,
+                  "type": "contract ERC20Claimable"
+                },
+                "id": 2452,
+                "name": "UserDefinedTypeName",
+                "src": "221:14:7"
+              }
+            ],
+            "id": 2453,
+            "name": "VariableDeclaration",
+            "src": "221:31:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 2541,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_claimableERC20",
+                      "overrides": null,
+                      "scope": 2463,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract ERC20Claimable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "ERC20Claimable",
+                          "referencedDeclaration": 955,
+                          "type": "contract ERC20Claimable"
+                        },
+                        "id": 2454,
+                        "name": "UserDefinedTypeName",
+                        "src": "274:14:7"
+                      }
+                    ],
+                    "id": 2455,
+                    "name": "VariableDeclaration",
+                    "src": "274:30:7"
+                  }
+                ],
+                "id": 2456,
+                "name": "ParameterList",
+                "src": "272:33:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2457,
+                "name": "ParameterList",
+                "src": "319:0:7"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract ERC20Claimable"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2453,
+                              "type": "contract ERC20Claimable",
+                              "value": "Claimable"
+                            },
+                            "id": 2458,
+                            "name": "Identifier",
+                            "src": "324:9:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2455,
+                              "type": "contract ERC20Claimable",
+                              "value": "_claimableERC20"
+                            },
+                            "id": 2459,
+                            "name": "Identifier",
+                            "src": "336:15:7"
+                          }
+                        ],
+                        "id": 2460,
+                        "name": "Assignment",
+                        "src": "324:27:7"
+                      }
+                    ],
+                    "id": 2461,
+                    "name": "ExpressionStatement",
+                    "src": "324:27:7"
+                  }
+                ],
+                "id": 2462,
+                "name": "Block",
+                "src": "319:82:7"
+              }
+            ],
+            "id": 2463,
+            "name": "FunctionDefinition",
+            "src": "261:140:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "fallback",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 2541,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2464,
+                "name": "ParameterList",
+                "src": "475:2:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2465,
+                "name": "ParameterList",
+                "src": "498:0:7"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2466,
+                "name": "Block",
+                "src": "498:2:7"
+              }
+            ],
+            "id": 2467,
+            "name": "FunctionDefinition",
+            "src": "466:34:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "receive",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 2541,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2468,
+                "name": "ParameterList",
+                "src": "609:2:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2469,
+                "name": "ParameterList",
+                "src": "632:0:7"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2470,
+                "name": "Block",
+                "src": "632:2:7"
+              }
+            ],
+            "id": 2471,
+            "name": "FunctionDefinition",
+            "src": "601:33:7"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "claimed"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "addrClaimer",
+                      "overrides": null,
+                      "scope": 2479,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 2472,
+                        "name": "ElementaryTypeName",
+                        "src": "757:7:7"
+                      }
+                    ],
+                    "id": 2473,
+                    "name": "VariableDeclaration",
+                    "src": "757:19:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "status",
+                      "overrides": null,
+                      "scope": 2479,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 2474,
+                        "name": "ElementaryTypeName",
+                        "src": "779:4:7"
+                      }
+                    ],
+                    "id": 2475,
+                    "name": "VariableDeclaration",
+                    "src": "779:11:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "amount",
+                      "overrides": null,
+                      "scope": 2479,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2476,
+                        "name": "ElementaryTypeName",
+                        "src": "793:7:7"
+                      }
+                    ],
+                    "id": 2477,
+                    "name": "VariableDeclaration",
+                    "src": "793:14:7"
+                  }
+                ],
+                "id": 2478,
+                "name": "ParameterList",
+                "src": "756:52:7"
+              }
+            ],
+            "id": 2479,
+            "name": "EventDefinition",
+            "src": "743:66:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "0e4f7f36",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "claimTokensOnBehalf",
+              "overrides": null,
+              "scope": 2541,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2480,
+                "name": "ParameterList",
+                "src": "843:2:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2481,
+                "name": "ParameterList",
+                "src": "853:0:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        2483
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "claimerBalance",
+                          "overrides": null,
+                          "scope": 2527,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 2482,
+                            "name": "ElementaryTypeName",
+                            "src": "919:7:7"
+                          }
+                        ],
+                        "id": 2483,
+                        "name": "VariableDeclaration",
+                        "src": "919:22:7"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "balanceOf",
+                              "referencedDeclaration": 436,
+                              "type": "function (address) view external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2453,
+                                  "type": "contract ERC20Claimable",
+                                  "value": "Claimable"
+                                },
+                                "id": 2484,
+                                "name": "Identifier",
+                                "src": "944:9:7"
+                              }
+                            ],
+                            "id": 2485,
+                            "name": "MemberAccess",
+                            "src": "944:19:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "address payable",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_contract$_ExerciceSolution_$2541",
+                                      "typeString": "contract ExerciceSolution"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "address",
+                                      "type": null
+                                    },
+                                    "id": 2486,
+                                    "name": "ElementaryTypeName",
+                                    "src": "964:7:7"
+                                  }
+                                ],
+                                "id": 2487,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "964:7:7"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -28,
+                                  "type": "contract ExerciceSolution",
+                                  "value": "this"
+                                },
+                                "id": 2488,
+                                "name": "Identifier",
+                                "src": "972:4:7"
+                              }
+                            ],
+                            "id": 2489,
+                            "name": "FunctionCall",
+                            "src": "964:13:7"
+                          }
+                        ],
+                        "id": 2490,
+                        "name": "FunctionCall",
+                        "src": "944:34:7"
+                      }
+                    ],
+                    "id": 2491,
+                    "name": "VariableDeclarationStatement",
+                    "src": "919:59:7"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "claimTokens",
+                              "referencedDeclaration": 954,
+                              "type": "function () external"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2453,
+                                  "type": "contract ERC20Claimable",
+                                  "value": "Claimable"
+                                },
+                                "id": 2492,
+                                "name": "Identifier",
+                                "src": "1014:9:7"
+                              }
+                            ],
+                            "id": 2494,
+                            "name": "MemberAccess",
+                            "src": "1014:21:7"
+                          }
+                        ],
+                        "id": 2495,
+                        "name": "FunctionCall",
+                        "src": "1014:23:7"
+                      }
+                    ],
+                    "id": 2496,
+                    "name": "ExpressionStatement",
+                    "src": "1014:23:7"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        2498
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newClaimerBalance",
+                          "overrides": null,
+                          "scope": 2527,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 2497,
+                            "name": "ElementaryTypeName",
+                            "src": "1077:7:7"
+                          }
+                        ],
+                        "id": 2498,
+                        "name": "VariableDeclaration",
+                        "src": "1077:25:7"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "balanceOf",
+                              "referencedDeclaration": 436,
+                              "type": "function (address) view external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2453,
+                                  "type": "contract ERC20Claimable",
+                                  "value": "Claimable"
+                                },
+                                "id": 2499,
+                                "name": "Identifier",
+                                "src": "1105:9:7"
+                              }
+                            ],
+                            "id": 2500,
+                            "name": "MemberAccess",
+                            "src": "1105:19:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "address payable",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_contract$_ExerciceSolution_$2541",
+                                      "typeString": "contract ExerciceSolution"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "address",
+                                      "type": null
+                                    },
+                                    "id": 2501,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1125:7:7"
+                                  }
+                                ],
+                                "id": 2502,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "1125:7:7"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -28,
+                                  "type": "contract ExerciceSolution",
+                                  "value": "this"
+                                },
+                                "id": 2503,
+                                "name": "Identifier",
+                                "src": "1133:4:7"
+                              }
+                            ],
+                            "id": 2504,
+                            "name": "FunctionCall",
+                            "src": "1125:13:7"
+                          }
+                        ],
+                        "id": 2505,
+                        "name": "FunctionCall",
+                        "src": "1105:34:7"
+                      }
+                    ],
+                    "id": 2506,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1077:62:7"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        2508
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "update",
+                          "overrides": null,
+                          "scope": 2527,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 2507,
+                            "name": "ElementaryTypeName",
+                            "src": "1190:7:7"
+                          }
+                        ],
+                        "id": 2508,
+                        "name": "VariableDeclaration",
+                        "src": "1190:14:7"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "-",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2498,
+                              "type": "uint256",
+                              "value": "newClaimerBalance"
+                            },
+                            "id": 2509,
+                            "name": "Identifier",
+                            "src": "1207:17:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2483,
+                              "type": "uint256",
+                              "value": "claimerBalance"
+                            },
+                            "id": 2510,
+                            "name": "Identifier",
+                            "src": "1227:14:7"
+                          }
+                        ],
+                        "id": 2511,
+                        "name": "BinaryOperation",
+                        "src": "1207:34:7"
+                      }
+                    ],
+                    "id": 2512,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1190:51:7"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2451,
+                                  "type": "mapping(address => uint256)",
+                                  "value": "claimedTokenAddress"
+                                },
+                                "id": 2513,
+                                "name": "Identifier",
+                                "src": "1282:19:7"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": -15,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 2514,
+                                    "name": "Identifier",
+                                    "src": "1302:3:7"
+                                  }
+                                ],
+                                "id": 2515,
+                                "name": "MemberAccess",
+                                "src": "1302:10:7"
+                              }
+                            ],
+                            "id": 2516,
+                            "name": "IndexAccess",
+                            "src": "1282:31:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2508,
+                              "type": "uint256",
+                              "value": "update"
+                            },
+                            "id": 2517,
+                            "name": "Identifier",
+                            "src": "1316:6:7"
+                          }
+                        ],
+                        "id": 2518,
+                        "name": "Assignment",
+                        "src": "1282:40:7"
+                      }
+                    ],
+                    "id": 2519,
+                    "name": "ExpressionStatement",
+                    "src": "1282:40:7"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                },
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2479,
+                              "type": "function (address,bool,uint256)",
+                              "value": "claimed"
+                            },
+                            "id": 2520,
+                            "name": "Identifier",
+                            "src": "1338:7:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -15,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 2521,
+                                "name": "Identifier",
+                                "src": "1346:3:7"
+                              }
+                            ],
+                            "id": 2522,
+                            "name": "MemberAccess",
+                            "src": "1346:10:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 2523,
+                            "name": "Literal",
+                            "src": "1357:4:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2508,
+                              "type": "uint256",
+                              "value": "update"
+                            },
+                            "id": 2524,
+                            "name": "Identifier",
+                            "src": "1362:6:7"
+                          }
+                        ],
+                        "id": 2525,
+                        "name": "FunctionCall",
+                        "src": "1338:31:7"
+                      }
+                    ],
+                    "id": 2526,
+                    "name": "EmitStatement",
+                    "src": "1333:36:7"
+                  }
+                ],
+                "id": 2527,
+                "name": "Block",
+                "src": "853:524:7"
+              }
+            ],
+            "id": 2528,
+            "name": "FunctionDefinition",
+            "src": "815:562:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "0776d118",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "tokensInCustody",
+              "overrides": null,
+              "scope": 2541,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "callerAddress",
+                      "overrides": null,
+                      "scope": 2540,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 2529,
+                        "name": "ElementaryTypeName",
+                        "src": "1478:7:7"
+                      }
+                    ],
+                    "id": 2530,
+                    "name": "VariableDeclaration",
+                    "src": "1478:21:7"
+                  }
+                ],
+                "id": 2531,
+                "name": "ParameterList",
+                "src": "1477:23:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 2540,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2532,
+                        "name": "ElementaryTypeName",
+                        "src": "1517:7:7"
+                      }
+                    ],
+                    "id": 2533,
+                    "name": "VariableDeclaration",
+                    "src": "1517:7:7"
+                  }
+                ],
+                "id": 2534,
+                "name": "ParameterList",
+                "src": "1516:9:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 2534
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2451,
+                              "type": "mapping(address => uint256)",
+                              "value": "claimedTokenAddress"
+                            },
+                            "id": 2535,
+                            "name": "Identifier",
+                            "src": "1575:19:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2530,
+                              "type": "address",
+                              "value": "callerAddress"
+                            },
+                            "id": 2536,
+                            "name": "Identifier",
+                            "src": "1595:13:7"
+                          }
+                        ],
+                        "id": 2537,
+                        "name": "IndexAccess",
+                        "src": "1575:34:7"
+                      }
+                    ],
+                    "id": 2538,
+                    "name": "Return",
+                    "src": "1568:41:7"
+                  }
+                ],
+                "id": 2539,
+                "name": "Block",
+                "src": "1526:93:7"
+              }
+            ],
+            "id": 2540,
+            "name": "FunctionDefinition",
+            "src": "1453:166:7"
+          }
+        ],
+        "id": 2541,
+        "name": "ContractDefinition",
+        "src": "63:2082:7"
+      }
+    ],
+    "id": 2542,
+    "name": "SourceUnit",
+    "src": "2:2143:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xacE3ea4F314b7E0F050A3b68d3b9a1c4e4ba4458",
+      "transactionHash": "0xaa95800ae2700450a55fbdd9931af9e38a0ecd01c8051ecfe2b5b92fa830a6b8"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x214E845C5fbb1FcA2C16c95A93eBA8C36Da20B82",
+      "transactionHash": "0x457c62b1f45e322e0c61f040dd44c534a594fdae519a0ae41e30410f2e1535c3"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-25T18:19:17.044Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
