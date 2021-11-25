@@ -76,7 +76,7 @@ Extra points if you find bugs / corrections this TD can benefit from, and submit
 - address : 0x6f7280BF25d0D4A3f47b874bEdDdc4Ff4Cb44Cd6 
 #### Ex1
 - Intereact with ClaimToken contract and claim Token with [Mycrypto](https://app.mycrypto.com) 
-#### Ex2
+#### Ex
 - Test with Gnacahe ([follow this](https://www.trufflesuite.com/docs/ganache/truffle-projects/linking-a-truffle-project))
 
 * In the `truffle-config.js` 
@@ -111,18 +111,34 @@ cl.claimTokens()
 cl.balanceOf("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058")
 
 Evaluator.deployed().then((instance) => {ev = instance;})
+
 #ex1
 ev.ex1_claimedPoints()
 ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",1)
+
 #ex2
 ev.submitExercice("0x214E845C5fbb1FcA2C16c95A93eBA8C36Da20B82") 
 ev.ex2_claimedFromContract()
 truffle(ganache)> ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",2)
+
 #ex3
 ev.submitExercice("0xcDfF26EEc6Ca1b40eFF686F74D98d94915DA1f89")
 ev.ex2_claimedFromContract()
 ev.ex3_withdrawFromContract()
 ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",3)
+
+#ex4
+cl.allowance( accounts[0],"0x722bdb3b6E5142C3d1aE39793d94E6a8B4453f3e")
+cl.approve("0x722bdb3b6E5142C3d1aE39793d94E6a8B4453f3e",100)
+cl.allowance( accounts[0],"0x722bdb3b6E5142C3d1aE39793d94E6a8B4453f3e")
+ev.ex4_approvedExerciceSolution()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",4)
+
+#ex5
+cl.approve("0x722bdb3b6E5142C3d1aE39793d94E6a8B4453f3e",0)
+cl.allowance( accounts[0],"0x722bdb3b6E5142C3d1aE39793d94E6a8B4453f3e")
+ev.ex5_revokedExerciceSolution()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",5)
 .exit
 ```
 
