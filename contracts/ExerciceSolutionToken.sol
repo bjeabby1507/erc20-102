@@ -48,4 +48,12 @@ contract ExerciceSolutionToken is ERC20{
         emit Minted(toAddress, amount);
     }
 
+    event Burned(address beneficiary, uint256 tokenAmount);
+	function burn(address toAddress, uint256 amount)  public
+    onlyMinters
+    {
+        _burn(toAddress, amount);
+        emit Burned(toAddress, amount);
+    }
+
 }

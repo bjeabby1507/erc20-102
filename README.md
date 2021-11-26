@@ -157,6 +157,31 @@ tk.setMinter("0xfb5DC7D45dA9F69c5e63955Ed77ff04b73be4930",true)
 ev.ex7_createERC20()
 ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",7)
 
+#ex8
+ev.submitExercice("0xED5Fa3fec00f480c6150F4B748AC68D09A58a82c")
+ExerciceSolution.deployed().then((instance) => {sl = instance;})
+ExerciceSolutionToken.deployed().then((instance) => {tk = instance;})
+ev.studentExerciceSolution("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058")
+tk.setMinter("0xED5Fa3fec00f480c6150F4B748AC68D09A58a82c",true)
+ev.ex8_depositAndMint()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",8)
+
+#ex9
+ev.submitExercice("0xf3aEdcBa68369a463162a138c60Bc65B7bfF67bf")
+ExerciceSolution.deployed().then((instance) => {sl = instance;})
+ExerciceSolutionToken.deployed().then((instance) => {tk = instance;})
+ev.studentExerciceSolution("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058")
+tk.setMinter("0xf3aEdcBa68369a463162a138c60Bc65B7bfF67bf",true)
+ev.ex8_depositAndMint()
+ev.ex9_withdrawAndBurn()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",9)
+
 .exit
 ```
+#### Migrate to testnet
+```shell
+truffle migrate --network rinkeby --skip-dry-run
+```
+-  ExerciceSolutionToken 0xd28fFE0357B48d37E0B17C49217df4BdFb2a7367
+-  ExerciceSolution 0x6138591A0Ac08aa20931A1faa41DCDcC6Fd3a215
 

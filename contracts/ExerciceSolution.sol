@@ -65,6 +65,8 @@ contract ExerciceSolution {
         {
             //update tokensInCustody
             claimedTokenAddress[msg.sender] = claimerBalance - amountToWithdraw;
+            //update the balance is tokenized : burn the withdrawn tokens
+            Token.burn(msg.sender,amountToWithdraw);
             emit withdrawn(msg.sender, true, amountToWithdraw);
             return amountToWithdraw;
         }
@@ -83,6 +85,8 @@ contract ExerciceSolution {
         {
             //update tokensInCustody that belongs to depositor
             claimedTokenAddress[msg.sender] = claimerBalance + amountToDeposit;
+            //update the balance is tokenized
+            Token.mint(msg.sender,amountToDeposit);
             emit deposit(msg.sender, true, amountToDeposit);
             return amountToDeposit;
         }
