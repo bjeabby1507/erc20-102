@@ -182,6 +182,6 @@ ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",9)
 ```shell
 truffle migrate --network rinkeby --skip-dry-run
 ```
--  ExerciceSolutionToken 0xd28fFE0357B48d37E0B17C49217df4BdFb2a7367
--  ExerciceSolution 0x6138591A0Ac08aa20931A1faa41DCDcC6Fd3a215
+-  ExerciceSolutionToken 0xc854AfFF44527CDe01F5B0e5cBb1C6c752B2c6A2
+-  ExerciceSolution 0x9E1DE2D63247B1cA14284C9A2519A7DFEba6d257
 
