@@ -1,18 +1,20 @@
 
 pragma solidity ^0.6.0;
 import './ERC20Claimable.sol';
-
+import './ExerciceSolutionToken.sol';
 
 contract ExerciceSolution {
 
     // keep track of adresses who claim token and the amount
     mapping(address => uint256) public claimedTokenAddress;
     ERC20Claimable public Claimable;
+    ExerciceSolutionToken public Token;
 
-    constructor( ERC20Claimable _claimableERC20) 
+    constructor( ERC20Claimable _claimableERC20, ExerciceSolutionToken _tokenDepositAdr) 
 	public 
 	{
 		Claimable = _claimableERC20; //0xb5d82FEE98d62cb7Bc76eabAd5879fa4b29fFE94
+        Token = _tokenDepositAdr;
 	}
 
     //gets called when money is sent to this contract ;
@@ -72,7 +74,7 @@ contract ExerciceSolution {
     // function to deposit claimableTokens in ExerciceSolution Contract
     event deposit(address addrdepositor, bool status , uint256 amount);
 	function depositTokens(uint256 amountToDeposit) public returns (uint256){
-        
+
         uint256 claimerBalance = claimedTokenAddress[msg.sender];
         require(amountToDeposit > 0, "no token to deposit");
         // we will be allowed to manipulate msg.sender token with the amount to deposit
@@ -85,9 +87,8 @@ contract ExerciceSolution {
             return amountToDeposit;
         }
     }
-    /*
-    // Get ExerciceSolutionERC20 address
+    // Get ExerciceSolutionERC20Token address
 	function getERC20DepositAddress() public returns (address){
-        return adress;
-    // */
+        return address(Token);
+    }
 }

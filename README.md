@@ -145,6 +145,18 @@ ev.submitExercice("0xf582e189fe7A74eA1f7964d06d792195D4F467DE")
 ev.ex2_claimedFromContract()
 ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",6)
 
+#ex7
+ev.submitExercice("0xfb5DC7D45dA9F69c5e63955Ed77ff04b73be4930")
+ExerciceSolution.deployed().then((instance) => {sl = instance;})
+ExerciceSolutionToken.deployed().then((instance) => {tk = instance;})
+sl.getERC20DepositAddress()
+tk.isMinter(accounts[0])
+tk.Owner()
+ev.studentExerciceSolution("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058")
+tk.setMinter("0xfb5DC7D45dA9F69c5e63955Ed77ff04b73be4930",true)
+ev.ex7_createERC20()
+ev.exerciceProgression("0x8eb32009Fe17E56AB5e4937f14DA1790150aB058",7)
+
 .exit
 ```
 
